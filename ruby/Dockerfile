@@ -1,28 +1,8 @@
-FROM ubuntu:15.04
+FROM alpine
 
-RUN apt-get update && \
-    apt-get install -qy --no-install-recommends \
-        autoconf \
-        build-essential \
-        ca-certificates \
-        curl \
-        git \
-        libffi-dev \
-        libgdbm-dev \
-        libgmp-dev \
-        libncurses5-dev \
-        libqdbm-dev \
-        libreadline6-dev \
-        libssl-dev \
-        libyaml-dev \
-        libz-dev \
-        systemtap && \
-    apt-get clean
-RUN mkdir -p /usr/src && \
-    curl http://ftp.ruby-lang.org/pub/ruby/2.2/ruby-2.2.2.tar.bz2 | \
-        tar -C /usr/src -xj
-RUN cd /usr/src/ruby-2.2.2 && \
-    autoconf && \
-    ./configure --prefix=/usr --disable-install-doc && \
-    make && make install && make clean
-RUN gem install -q --no-rdoc --no-ri bundler
+RUN apk update && apk upgrade
+
+RUN apk add curl git ruby ruby-io-console ruby-bundler
+
+# Clean APK cache
+RUN rm -rf /var/cache/apk/*

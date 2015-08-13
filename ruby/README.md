@@ -1,4 +1,10 @@
 
+## Using
+
+```sh
+docker run -it --rm treeder/ruby ruby -v
+```
+
 ## Building
 
 ```sh
