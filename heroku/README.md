@@ -10,6 +10,17 @@ docker run --rm -i -t -v $HOME:/root -v $PWD:/app -w /app treeder/heroku heroku 
 
 We mount /root so it can write the heroku credentials to .netrc.
 
+Check the logs:
+
+```
+docker run --rm -i -t -v $HOME:/root -v $PWD:/app -w /app treeder/heroku heroku logs
+```
+
+Or adding the heroku git remote:
+
+```
+docker run --rm -i -t -v $HOME:/root -v $PWD:/app -w /app treeder/heroku heroku git:remote -a falling-wind-1624
+```
 
 ## Building
 
