@@ -2,30 +2,37 @@
 
 ## Usage
 
-It's easy, try any heroku command like this:
+It's easy, try any heroku command.
 
-```
-docker run --rm -i -t -v $HOME:/root -v $PWD:/app -w /app treeder/heroku heroku apps
+For instance, to login (one time only):
+
+```sh
+docker run --rm -it -v $HOME:/root -v $PWD:/app -w /app treeder/heroku heroku login
 ```
 
 We mount /root so it can write the heroku credentials to .netrc.
 
+
+```sh
+docker run --rm -it -v $HOME:/root -v $PWD:/app -w /app treeder/heroku heroku apps
+```
+
 Check the logs:
 
-```
-docker run --rm -i -t -v $HOME:/root -v $PWD:/app -w /app treeder/heroku heroku logs
+```sh
+docker run --rm -it -v $HOME:/root -v $PWD:/app -w /app treeder/heroku heroku logs
 ```
 
-Or adding the heroku git remote:
+Or adding a heroku git remote:
 
-```
-docker run --rm -i -t -v $HOME:/root -v $PWD:/app -w /app treeder/heroku heroku git:remote -a falling-wind-1624
+```sh
+docker run --rm -it -v $HOME:/root -v $PWD:/app -w /app treeder/heroku heroku git:remote -a falling-wind-1624
 ```
 
 ## Building
 
 ```sh
-docker build -t treeder/heroku:VERSION .
+docker build -t treeder/heroku:latest .
 ```
 
 Push:
