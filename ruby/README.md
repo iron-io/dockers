@@ -1,7 +1,7 @@
 
 ## Using
 
-See iron/ruby-bundle README for how to vendor your depencies:
+See iron/ruby-bundle README for how to vendor your dependencies:
 
 Test your code:
 
