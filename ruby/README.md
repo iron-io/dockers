@@ -1,18 +1,35 @@
 
 ## Using
 
+See iron/ruby-bundle README for how to vendor your depencies:
+
+Test your code:
+
 ```sh
-docker run -it --rm treeder/ruby ruby -v
+docker run --rm -it -v $PWD:/app -w /app iron/ruby ruby hello.rb
 ```
 
-## Building
+## Building an image
 
-```sh
-docker build -t treeder/ruby:latest .
+Make a Dockerfile:
+
+```
+FROM iron/ruby
+
+WORKDIR /app
+ADD . /app
+
+ENTRYPOINT ["ruby", "hello.rb"]
 ```
 
-Push:
+Build the image:
 
 ```sh
-docker push treeder/ruby
+docker build -t username/imagename:latest .
+```
+
+Push it to Docker Hub:
+
+```sh
+docker push username/imagename
 ```
