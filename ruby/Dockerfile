@@ -1,4 +1,4 @@
-FROM alpine
+FROM iron/base
 
 RUN apk update && apk upgrade
 

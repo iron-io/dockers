@@ -1,11 +1,8 @@
-FROM alpine
+FROM iron/base
 
 RUN apk update && apk upgrade
-
-RUN apk add curl git mercurial make
-RUN apk add openssl-dev build-base
+# Image size is 131 MB with `apk add go`, can we do better? Maybe doesn't matter since it's only to build
 RUN apk add go
-
 # Clean APK cache
 RUN rm -rf /var/cache/apk/*
 

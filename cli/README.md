@@ -5,18 +5,30 @@ the [ironcli README](https://github.com/iron-io/ironcli) for more details.
 
 ## Usage
 
+NOTE: This requires you to set your Iron.io credentials as environment variables, eg:
+
+```sh
+export IRON_TOKEN=YOURTOKEN
+export IRON_PROJECT_ID=YOURPROJECT_ID
+```
+
 Check cli version:
 
 ```sh
 docker run --rm iron/cli --version
 ```
 
-Queue up a worker job:
+Upload a worker:
 
 ```sh
-docker run --rm iron/cli worker queue MYWORKER
+docker run --rm -e IRON_TOKEN -e IRON_PROJECT_ID iron/cli worker upload --name hello treeder/hello.rb
 ```
 
+Queue up a worker:
+
+```sh
+docker run --rm -e IRON_TOKEN -e IRON_PROJECT_ID iron/cli worker queue hello
+```
 
 ## Building this image
 
