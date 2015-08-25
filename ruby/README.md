@@ -9,7 +9,7 @@ Test your code:
 docker run --rm -it -v $PWD:/app -w /app iron/ruby ruby hello.rb
 ```
 
-## Building an image
+## Building an image for your Ruby app:
 
 Make a Dockerfile:
 
@@ -32,4 +32,17 @@ Push it to Docker Hub:
 
 ```sh
 docker push username/imagename
+```
+
+
+## Building
+
+```sh
+docker build -t iron/ruby:latest .
+```
+
+Push:
+
+```sh
+docker push iron/ruby
 ```
