@@ -2,7 +2,7 @@
 ## Using
 
 ```sh
-docker run -it --rm iron/mono mono -v
+docker run -it --rm iron/mono mono --version
 ```
 
 ## Building this image
@@ -11,7 +11,7 @@ docker run -it --rm iron/mono mono -v
 docker build -t iron/mono:latest .
 ```
 
-Tag the version, check it with `docker run --rm iron/mono mono -v`:
+Tag the version, check it with `docker run --rm iron/mono mono --version`:
 
 ```sh
 docker tag iron/mono:latest iron/mono:X.Y.Z
