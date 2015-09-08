@@ -6,8 +6,8 @@ iron/ruby to run them (way smaller image).
 Vendor your dependencies:
 
 ```sh
-docker run --rm -v $PWD:/app -w /app iron/ruby-bundle sh -c 'bundle install --standalone --clean'
-docker run --rm -v $PWD:/app -w /app iron/ruby-bundle sh -c 'bundle install --standalone --clean'
+docker run --rm -v $PWD:/app -w /app iron/ruby-bundle bundle install --standalone --clean
+docker run --rm -v $PWD:/app -w /app iron/ruby-bundle bundle install --standalone --clean
 sudo chmod -R a+rw .bundle
 sudo chmod -R a+rw bundle
 ```
