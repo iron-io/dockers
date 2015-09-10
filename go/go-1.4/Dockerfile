@@ -7,3 +7,4 @@ RUN apk add go git bzr
 RUN rm -rf /var/cache/apk/*
 
 ENV GOPATH /go
+ENV GO15VENDOREXPERIMENT 1
