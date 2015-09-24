@@ -12,7 +12,7 @@ TODO: Build it into a base image, don't really need Go in it.
 docker build -t iron/go:latest .
 ```
 
-Tag it with Go version too: (can check with `docker run --rm iron/go version`):
+Tag it with Go version too: (can check with `docker run --rm iron/go go version`):
 
 ```sh
 docker tag iron/go:latest iron/go:1.4.2

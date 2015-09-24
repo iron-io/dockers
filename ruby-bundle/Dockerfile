@@ -1,10 +1,9 @@
-FROM alpine
+FROM iron/base
 
 RUN apk update && apk upgrade
 
 RUN apk add curl git make
-RUN apk add openssl-dev build-base
-RUN apk add ruby-dev ruby ruby-io-console ruby-bundler
+RUN apk add openssl-dev build-base libxml2-dev libxslt-dev ruby-dev ruby ruby-io-console ruby-bundler
 
 # Clean APK cache
 RUN rm -rf /var/cache/apk/*
