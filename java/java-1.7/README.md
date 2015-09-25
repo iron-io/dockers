@@ -1,28 +1,23 @@
+# Java 1.7 JRE Image
+
+This is a small, [Alpine Linux](http://www.alpinelinux.org/) based Docker image
+that contains the Java 1.7 JVM. It's useful for executing Java bytecode, but note
+that it doesn't contain the JDK, so you can't use it to compile Java code.
 
 ## Using
 
 ```sh
-docker run -it --rm iron/java java -version
+docker run -it --rm iron/java:1.7 java -version
 ```
 
 ## Building this image
 
 ```sh
-docker build -t iron/java:latest .
-```
-
-Tag the version, check it with `docker run --rm iron/java java -version`:
-
-```sh
-docker tag iron/java:latest iron/java:X.Y.Z
+docker build -t iron/java:1.7 .
 ```
 
 Push:
 
 ```sh
-docker push iron/java
+docker push iron/java:1.7
 ```
-
-## TODO
-
-* [ ] we could maybe make a few different versions of this, one for building and a smaller one for running (openjdk7-jre).
