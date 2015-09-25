@@ -1,0 +1,12 @@
+FROM iron/base
+
+RUN apk update && apk upgrade
+
+RUN apk add curl
+RUN apk add php php-phar php-json php-openssl
+
+RUN curl -sS https://getcomposer.org/installer | php
+RUN mv composer.phar /usr/local/bin/composer
+
+# Clean APK cache
+RUN rm -rf /var/cache/apk/*
