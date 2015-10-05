@@ -1,4 +1,6 @@
 
+Image on Docker Hub: https://hub.docker.com/r/iron/ruby
+
 ## Using
 
 See iron/ruby-bundle README for how to vendor your dependencies:
