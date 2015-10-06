@@ -1,4 +1,4 @@
-FROM iron/base
+FROM iron/python:2
 
 RUN apk update && apk upgrade
 

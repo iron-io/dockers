@@ -1,4 +1,4 @@
-FROM iron/base
+FROM iron/ruby
 
 RUN apk update && apk upgrade
 

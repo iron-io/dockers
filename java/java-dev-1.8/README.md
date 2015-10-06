@@ -14,11 +14,17 @@ docker run -it --rm iron/java-dev:1.8 javac -version
 ## Building this image
 
 ```sh
-docker build -t iron/java-dev:1.8 .
+docker build -t iron/java:1.8-dev .
+```
+
+Check full version: `docker run --rm iron/java:1.8-dev java -version`, and tag it:
+
+```sh
+docker tag iron/java:1.8-dev iron/java:1.8.X-dev
 ```
 
 Push:
 
 ```sh
-docker push iron/java-dev:1.8
+docker push iron/java
 ```

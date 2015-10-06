@@ -1,10 +1,16 @@
 
-This image is a base image for Iron.io's set of tiny images. Currently, it's just the alpine OS image. 
+This image is a base image for Iron.io's set of tiny images. Currently, it's just the alpine OS image.
 
 ## Building this image
 
 ```sh
 docker build -t iron/base:latest .
+```
+
+Tag it with Linux version:
+
+```sh
+docker tag iron/base:latest iron/base:X.Y.Z
 ```
 
 Push:
