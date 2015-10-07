@@ -6,6 +6,7 @@ RUN apk update && apk upgrade
 # RUN apk add ca-certificates
 
 #RUN apk add musl
+RUN apk add ca-certificates
 
 RUN rm -rf /var/cache/apk/*
 ADD https://raw.githubusercontent.com/CenturyLinkLabs/ca-certs-base-image/master/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
