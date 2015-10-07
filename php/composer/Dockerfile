@@ -1,4 +1,4 @@
-FROM iron/base
+FROM iron/php
 
 RUN apk update && apk upgrade
 

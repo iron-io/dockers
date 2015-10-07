@@ -2,23 +2,25 @@
 ## Using
 
 ```sh
-docker run -it --rm iron/php-composer composer install
+docker run -it --rm iron/php:dev composer install
 ```
 
 ## Building this image
 
 ```sh
-docker build -t iron/php-composer:latest .
+docker build -t iron/php:dev .
 ```
 
-Tag the version, check it with `docker run --rm iron/php-composer composer --version`:
+Tag the version, check it with `docker run --rm iron/php:dev php --version`:
 
 ```sh
-docker tag iron/php-composer:latest iron/php-composer:X.Y.Z
+docker tag iron/php:dev iron/php:5-dev
+docker tag iron/php:dev iron/php:5.Y-dev
+docker tag iron/php:dev iron/php:5.Y.Z-dev
 ```
 
 Push:
 
 ```sh
-docker push iron/php-composer
+docker push iron/php
 ```

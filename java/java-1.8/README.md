@@ -20,6 +20,7 @@ docker build -t iron/java:latest .
 Tag versions, run `docker run --rm iron/java java -version` to check.
 
 ```sh
+docker tag iron/java:latest iron/java:1
 docker tag iron/java:latest iron/java:1.8
 docker tag iron/java:latest iron/java:1.8.X
 ```
