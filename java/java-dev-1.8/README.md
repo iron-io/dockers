@@ -8,7 +8,7 @@ If you're executing Java code in production, however, we recommend you use iron/
 ## Using
 
 ```sh
-docker run -it --rm iron/java-dev:1.8 javac -version
+docker run -it --rm iron/java:1.8-dev javac -version
 ```
 
 ## Building this image

@@ -1,9 +1,11 @@
 FROM iron/base
 
-RUN apk update; apk upgrade; \
-    sed -i -e 's/v3\.2/edge/g' /etc/apk/repositories; apk update; \
-    apk add curl make git go; \
-    mkdir /gopath; \
-    rm -rf /var/cache/apk/*
+RUN echo '@edge http://nl.alpinelinux.org/alpine/edge/main' >> /etc/apk/repositories
+RUN echo '@community http://nl.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories
+
+RUN apk update && apk upgrade
+RUN apk add curl make git go@community
+
+RUN rm -rf /var/cache/apk/*
 
 ENV GOPATH /go

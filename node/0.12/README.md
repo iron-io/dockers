@@ -13,10 +13,10 @@ docker run -it --rm iron/node node -v
 docker build -t iron/node:0.12 .
 ```
 
-Tag the full version, check it with `docker run --rm iron/node node -v`:
+Tag the full version, check it with `docker run --rm iron/node:0.12 node -v`:
 
 ```sh
-docker tag iron/node:0.12 iron/node:X.Y.Z
+docker tag iron/node:0.12 iron/node:0.12.Z
 ```
 
 Push:

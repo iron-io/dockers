@@ -4,9 +4,11 @@ RUN echo '@edge http://nl.alpinelinux.org/alpine/edge/main' >> /etc/apk/reposito
 RUN echo '@community http://nl.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories
 RUN apk update && apk upgrade
 
-RUN apk add openjdk8@community
-# puts javac in the PATH
-ENV PATH=/usr/lib/jvm/java-1.8-openjdk/bin:$PATH
+RUN apk add erlang-crypto@edge
+RUN apk add elixir@edge
+
+# this line and maybe crypto package above may only be required when building
+RUN mix local.hex --force
 
 # Clean APK cache
 RUN rm -rf /var/cache/apk/*

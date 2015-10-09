@@ -1,6 +1,7 @@
 FROM iron/base
 
-RUN echo 'http://nl.alpinelinux.org/alpine/v2.6/main' >> /etc/apk/repositories && echo 'http://nl.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories
+RUN echo '@edge http://nl.alpinelinux.org/alpine/edge/main' >> /etc/apk/repositories
+RUN echo '@community http://nl.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories
 RUN apk update && apk upgrade
 
 # openjdk7-jre-base contains no GUI support. see https://pkgs.alpinelinux.org/package/main/x86_64/openjdk7-jre-base
