@@ -15,9 +15,9 @@ docker build -t iron/php:latest .
 Tag the version, check it with `docker run --rm iron/php php -v`:
 
 ```sh
-docker tag iron/php:latest iron/php:5
-docker tag iron/php:latest iron/php:5.Y
-docker tag iron/php:latest iron/php:5.Y.Z
+docker tag -f iron/php:latest iron/php:5
+docker tag -f iron/php:latest iron/php:5.Y
+docker tag -f iron/php:latest iron/php:5.Y.Z
 ```
 
 Push:

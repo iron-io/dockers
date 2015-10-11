@@ -11,7 +11,7 @@ docker run -it --rm iron/python python --version
 docker build -t iron/python:2-dev .
 ```
 
-Tag the version, check it with `docker run --rm iron/python python --version`:
+Tag the version, check it with `docker run --rm iron/python:2-dev sh -c 'python --version && pip --version'`:
 
 ```sh
 docker tag iron/python:latest iron/python:2.Y-dev
