@@ -10,9 +10,9 @@ docker build -t iron/node:dev .
 Tag the ruby version, check it with `docker run --rm iron/node:dev node -v`:
 
 ```sh
-docker tag iron/ruby:dev iron/ruby:2-dev
-docker tag iron/ruby:dev iron/ruby:2.Y-dev
-docker tag iron/ruby:dev iron/ruby:2.Y.Z-dev
+docker tag -f iron/ruby:dev iron/node:4-dev
+docker tag -f iron/ruby:dev iron/node:4.Y-dev
+docker tag -f iron/ruby:dev iron/node:4.Y.Z-dev
 ```
 
 
