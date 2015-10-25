@@ -19,5 +19,5 @@ docker tag -f iron/ruby:dev iron/node:4.Y.Z-dev
 Push:
 
 ```sh
-docker push iron/ruby-bundle
+docker push iron/node
 ```
