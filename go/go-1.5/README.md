@@ -1,10 +1,6 @@
 
-## Using
 
-
-## Building an image for your Go app
-
-TODO: Build it into a base image, don't really need Go in it.
+Use `iron/go:dev` for building your Go programs and `iron/go` for running them. 
 
 ## Building this image
 
