@@ -10,17 +10,15 @@ TODO: Build it into a base image, don't really need Go in it.
 
 
 ```sh
-docker build -t iron/go:latest .
+docker build -t iron/go:dev .
 ```
-
-NOTE: Since this doesn't need any Go specific stuff, use the versions from the `dev` build.
 
 Tag the version, check it with `docker run --rm iron/go:dev go version`:
 
 ```sh
-docker tag iron/go:latest iron/go:1
-docker tag iron/go:latest iron/go:1.5
-docker tag iron/go:latest iron/go:1.5.Z
+docker tag iron/go:latest iron/go:1-dev
+docker tag iron/go:latest iron/go:1.5-dev
+docker tag iron/go:latest iron/go:1.5.Z-dev
 ```
 
 Push:
