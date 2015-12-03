@@ -16,9 +16,9 @@ docker build -t iron/go:dev .
 Tag the version, check it with `docker run --rm iron/go:dev go version`:
 
 ```sh
-docker tag iron/go:latest iron/go:1-dev
-docker tag iron/go:latest iron/go:1.5-dev
-docker tag iron/go:latest iron/go:1.5.Z-dev
+docker tag -f iron/go:dev iron/go:1-dev
+docker tag -f iron/go:dev iron/go:1.5-dev
+docker tag -f iron/go:dev iron/go:1.5.Z-dev
 ```
 
 Push:
