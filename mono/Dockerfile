@@ -7,5 +7,8 @@ RUN apk update && apk upgrade
 
 RUN apk add mono@testing
 
+# Move ca certificates into Mono's certificate store (http://www.mono-project.com/docs/faq/security/)
+RUN cert-sync /etc/ssl/certs/ca-certificates.crt
+
 # Clean APK cache
 RUN rm -rf /var/cache/apk/*
