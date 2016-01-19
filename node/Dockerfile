@@ -5,5 +5,6 @@ RUN echo '@community http://nl.alpinelinux.org/alpine/edge/community' >> /etc/ap
 
 RUN apk update && apk upgrade
 RUN apk add curl nodejs@community
-RUN npm install -g npm
+# We don't need npm in this one, only in :dev
+RUN npm uninstall -g npm
 RUN rm -rf /var/cache/apk/*

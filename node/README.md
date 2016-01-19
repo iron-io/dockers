@@ -4,7 +4,7 @@ Docker Hub: https://hub.docker.com/r/iron/node/
 ## Using
 
 ```sh
-docker run -it --rm iron/node:4.1 node -v
+docker run -it --rm iron/node node -v
 ```
 
 ## Building this image
