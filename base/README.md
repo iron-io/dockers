@@ -3,6 +3,15 @@ This image is a base image for Iron.io's set of tiny images. Currently, it's jus
 
 ## Building this image
 
+First, be sure to get the latest alpine:
+
+```sh
+docker pull alpine
+docker pull alpine:edge
+```
+
+Then build it:
+
 ```sh
 docker build -t iron/base:latest --no-cache .
 ```
