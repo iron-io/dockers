@@ -1,3 +1,4 @@
+[![](http://badge-imagelayers.iron.io/iron/mono:latest.svg)](http://imagelayers.iron.io/?images=iron/mono:latest 'Get your own badge on imagelayers.iron.io')
 
 ## Using
 
@@ -14,9 +15,9 @@ docker build -t iron/mono:latest .
 Tag the version, check it with `docker run --rm iron/mono mono --version`:
 
 ```sh
-docker tag iron/mono:latest iron/mono:X
-docker tag iron/mono:latest iron/mono:X.Y
-docker tag iron/mono:latest iron/mono:X.Y.Z
+docker tag -f iron/mono:latest iron/mono:X
+docker tag -f iron/mono:latest iron/mono:X.Y
+docker tag -f iron/mono:latest iron/mono:X.Y.Z
 ```
 
 Push:

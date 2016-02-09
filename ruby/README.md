@@ -1,3 +1,4 @@
+[![](http://badge-imagelayers.iron.io/iron/ruby:latest.svg)](http://imagelayers.iron.io/?images=iron/ruby:latest 'Get your own badge on imagelayers.iron.io')
 
 Image on Docker Hub: https://hub.docker.com/r/iron/ruby
 

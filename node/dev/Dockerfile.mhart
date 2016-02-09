@@ -1,0 +1,9 @@
+FROM mhart/alpine-node:5
+
+
+RUN apk update && apk upgrade \
+  && apk add git \
+  && rm -rf /var/cache/apk/*
+
+# Can't update npm, getting errors for some reason?
+# RUN npm install -g npm

@@ -5,6 +5,6 @@ RUN echo '@edge http://nl.alpinelinux.org/alpine/edge/main' >> /etc/apk/reposito
   && echo '@testing http://nl.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories \
   && apk update \
   && apk upgrade \
-  && apk add mono@testing \
+  && apk add mono-dev@testing \
   && cert-sync /etc/ssl/certs/ca-certificates.crt \
   && rm -rf /var/cache/apk/*

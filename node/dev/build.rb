@@ -2,7 +2,9 @@
 require 'open3'
 
 from = 'iron/node:dev'
-cmd = "docker build -t #{from} ."
+
+# TEMP: using mhart version
+cmd = "docker build -t #{from} -f Dockerfile.mhart ."
 
 # stream this one since build can take a bit
 Open3.popen2e(cmd) do |stdin, stdout_stderr, wait_thread|
@@ -13,7 +15,9 @@ Open3.popen2e(cmd) do |stdin, stdout_stderr, wait_thread|
   # stdin.puts 'ls'
   # stdin.close
 
-  wait_thread.value
+  exit_status = wait_thread.value
+  puts "exit_status: #{exit_status}"
+  raise exit_status if exit_status.exitstatus != 0
 end
 
 v = `docker run --rm #{from} node -v`.strip
