@@ -15,7 +15,6 @@ docker tag -f iron/node:dev iron/node:4.Y-dev
 docker tag -f iron/node:dev iron/node:4.Y.Z-dev
 ```
 
-
 Push:
 
 ```sh

@@ -4,6 +4,6 @@ RUN echo '@edge http://nl.alpinelinux.org/alpine/edge/main' >> /etc/apk/reposito
 RUN echo '@community http://nl.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories
 
 RUN apk update && apk upgrade \
-  && apk add nodejs-dev@community nodejs@community \
+  && apk add git nodejs-dev@community nodejs@community \
   && npm install -g npm \
   && rm -rf /var/cache/apk/*
