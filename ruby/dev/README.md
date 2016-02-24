@@ -20,25 +20,4 @@ Add the following to your code so it uses the vendored gems:
 require_relative 'bundle/bundler/setup'
 ```
 
-See iron/ruby image for running your code:
-
-## Building
-
-```sh
-docker build -t iron/ruby:dev .
-```
-
-Tag the ruby version, check it with `docker run --rm iron/ruby:dev ruby -v`:
-
-```sh
-docker tag iron/ruby:dev iron/ruby:2-dev
-docker tag iron/ruby:dev iron/ruby:2.Y-dev
-docker tag iron/ruby:dev iron/ruby:2.Y.Z-dev
-```
-
-
-Push:
-
-```sh
-docker push iron/ruby-bundle
-```
+See iron/ruby image for running your code.

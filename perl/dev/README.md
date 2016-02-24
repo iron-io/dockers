@@ -10,12 +10,12 @@ docker run -it --rm iron/perl:dev perl -v
 docker build -t iron/perl:dev .
 ```
 
-Tag the version, check it with `docker run --rm iron/perl perl -v`:
+Tag the version, check it with `docker run --rm iron/perl:dev perl -v`:
 
 ```sh
-docker tag -f iron/perl:dev iron/perl:5-dev
-docker tag -f iron/perl:dev iron/perl:5.Y-dev
-docker tag -f iron/perl:dev iron/perl:5.Y.Z-dev
+docker tag iron/perl:dev iron/perl:5-dev
+docker tag iron/perl:dev iron/perl:5.Y-dev
+docker tag iron/perl:dev iron/perl:5.Y.Z-dev
 ```
 
 Push:

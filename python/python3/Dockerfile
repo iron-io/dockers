@@ -1,8 +1,5 @@
 FROM iron/base
 
-RUN apk update && apk upgrade
-
-RUN apk add python3
-
-# Clean APK cache
-RUN rm -rf /var/cache/apk/*
+RUN apk update && apk upgrade \
+  && apk add python3 \
+  && rm -rf /var/cache/apk/*

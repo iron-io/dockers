@@ -56,24 +56,3 @@ Push it to Docker Hub:
 ```sh
 docker push username/imagename
 ```
-
-
-## Building this image
-
-```sh
-docker build -t iron/ruby:latest .
-```
-
-Tag the ruby version, check it with `docker run --rm iron/ruby ruby -v`:
-
-```sh
-docker tag iron/ruby:latest iron/ruby:X
-docker tag iron/ruby:latest iron/ruby:X.Y
-docker tag iron/ruby:latest iron/ruby:X.Y.Z
-```
-
-Push:
-
-```sh
-docker push iron/ruby
-```
