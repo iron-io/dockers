@@ -21,6 +21,8 @@ v += ".0"
 p v
 vtag(name, tag, v, true)
 
+Dir.chdir '../'
+p Dir.pwd
 tag = "latest"
 build("#{name}:#{tag}")
 vtag(name, tag, v, false)
