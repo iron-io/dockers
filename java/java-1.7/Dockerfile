@@ -5,5 +5,5 @@ RUN echo '@edge http://nl.alpinelinux.org/alpine/edge/main' >> /etc/apk/reposito
   && echo '@community http://nl.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories \
   && apk update \
   && apk upgrade \
-  && apk add openjdk7-jre-base \
+  && apk add openjdk7-jre-base@community \
   && rm -rf /var/cache/apk/*

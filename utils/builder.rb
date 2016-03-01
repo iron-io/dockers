@@ -18,8 +18,9 @@ def build(name)
   end
 end
 
-def vtag(name, fromtag, v, dev=false)
-  3.times do |i|
+# numtags is how many version tags starting from patch. If 1, then only patch will be applied.
+def vtag(name, fromtag, v, dev=false, numtags=3)
+  numtags.times do |i|
     to = "#{name}:#{v}"
     to += "-dev" if dev
     from = "#{name}:#{fromtag}"
