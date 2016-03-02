@@ -9,23 +9,3 @@ that it doesn't contain the JDK, so you can't use it to compile Java code.
 ```sh
 docker run -it --rm iron/java:1.7 java -version
 ```
-
-## Building this image
-
-NOTE: 1.8 has latest tag, not this one.
-
-```sh
-docker build -t iron/java:1.7 .
-```
-
-Tag patch version, run `docker run --rm iron/java:1.7 java -version` to check.
-
-```sh
-docker tag iron/java:1.7 iron/java:1.7.X
-```
-
-Push:
-
-```sh
-docker push iron/java
-```

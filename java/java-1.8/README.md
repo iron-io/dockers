@@ -10,23 +10,3 @@ Use iron/java-dev to compile code.
 ```sh
 docker run -it --rm iron/java:1.8 java -version
 ```
-
-## Building this image
-
-```sh
-docker build -t iron/java:latest .
-```
-
-Tag versions, run `docker run --rm iron/java java -version` to check.
-
-```sh
-docker tag iron/java:latest iron/java:1
-docker tag iron/java:latest iron/java:1.8
-docker tag iron/java:latest iron/java:1.8.X
-```
-
-Push:
-
-```sh
-docker push iron/java
-```

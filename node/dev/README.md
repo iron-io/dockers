@@ -2,17 +2,3 @@
 
 This image is for building your dependencies. You should use
 iron/node to run them (smaller image).
-
-## Building
-
-**NOTE: Temporarily using [mhart/alpine-node](https://github.com/mhart/alpine-node) for v5 images until Alpine package updated.**
-
-```sh
-ruby build.rb
-```
-
-Push:
-
-```sh
-docker push iron/node
-```
