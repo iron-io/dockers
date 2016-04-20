@@ -1,9 +1,6 @@
 require 'open3'
 require_relative '../utils/builder'
 
-puts "WARNING: Don't run this until alpine has node 5.0 package"
-exit
-
 name = "iron/node"
 
 tag = "latest"
