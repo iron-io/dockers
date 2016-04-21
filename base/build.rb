@@ -1,6 +1,9 @@
 require 'open3'
 require_relative '../utils/builder'
 
+stream_exec('docker pull alpine')
+stream_exec('docker pull alpine:edge')
+
 name = "iron/base"
 
 tag = "latest"
