@@ -40,13 +40,14 @@ end
 
 # numtags is how many version tags starting from patch. If 1, then only patch will be applied.
 def vtag(name, fromtag, v, dev=false, numtags=3)
-  numtags.times do |i|
+  newnum = [numtags, v.split(".").length()].min()
+  newnum.times do |i|
     to = "#{name}:#{v}"
     to += "-dev" if dev
     from = "#{name}:#{fromtag}"
     puts "Tagging #{from} with #{to}"
     out, status = Open3.capture2e("docker tag #{from} #{to}")
     puts out
-    v = v[0...v.rindex('.')] if i != 2
+    v = v[0...v.rindex('.')] if i < (newnum - 1)
   end
 end
