@@ -10,5 +10,6 @@ RUN apk add --update wget ca-certificates bash && \
     lein && \
 
     # Do clean up
-    apk del wget ca-certificates && \
+    apk del wget && \
     rm -rf /tmp/* /var/cache/apk/*
+    

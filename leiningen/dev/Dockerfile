@@ -14,4 +14,4 @@ RUN wget -q "https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSI
 RUN chmod 0755 /usr/local/bin/lein && lein
 
 # Clean up
-RUN apk del wget ca-certificates && rm -rf /tmp/* /var/cache/apk/*
+RUN apk del wget && rm -rf /tmp/* /var/cache/apk/*
