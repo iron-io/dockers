@@ -8,4 +8,6 @@ RUN apk add curl make git bzr mercurial go@community
 
 RUN rm -rf /var/cache/apk/*
 
+RUN mkdir /go
 ENV GOPATH /go
+
