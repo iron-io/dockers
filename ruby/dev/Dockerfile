@@ -6,3 +6,6 @@ RUN apk update && apk upgrade \
     libpq sqlite-dev mariadb-libs postgresql-dev \
     ruby-dev ruby ruby-io-console ruby-bundler \
     && rm -rf /var/cache/apk/*
+
+# Now upate bundler: https://github.com/iron-io/dockers/issues/50
+RUN gem install --no-rdoc --no-ri bundler
