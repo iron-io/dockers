@@ -4,7 +4,7 @@ RUN echo '@edge http://nl.alpinelinux.org/alpine/edge/main' >> /etc/apk/reposito
 RUN echo '@community http://nl.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories
 
 RUN apk update && apk upgrade
-RUN apk add curl make git bzr mercurial go@community
+RUN apk add curl make git bzr mercurial go@community alpine-sdk
 
 RUN rm -rf /var/cache/apk/*
 
