@@ -1,12 +1,8 @@
-FROM iron/java
+FROM iron/java:1.8
 
-ENV VERSION 1.0.5
+ENV KOTLIN_COMPILER_URL=https://github.com/JetBrains/kotlin/releases/download/v1.0.5/kotlin-compiler-1.0.5.zip
 
-ENV KOTLIN_HOME=/usr/share/kotlin
-ENV KOTLIN_COMPILER_URL https://github.com/JetBrains/kotlin/releases/download/v${VERSION}/kotlin-compiler-${VERSION}.zip
-
-RUN apk update
-RUN apk add bash
+RUN apk --no-cache add bash
 
 RUN mkdir /opt
 
