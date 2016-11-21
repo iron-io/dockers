@@ -1,3 +1,11 @@
+Image can be used to build and optionally run Kotlin source code.
+
+## Usage
+
+```sh
+docker run -it --rm iron/kotlin kotlin -version
+```
+
 ## Building this image
 
 ```sh
@@ -18,6 +26,6 @@ Push:
 docker push iron/kotlin
 ```
 
-Updating Kotlin version:
+## Updating Kotlin version:
 
-Go to https://github.com/JetBrains/kotlin/releases/ for the latest releases.
+Go to https://github.com/JetBrains/kotlin/releases/ for the latest releases. The Dockerfile can be updated to point at tagged releases.
