@@ -36,7 +36,7 @@ docker run -it --rm -v "$PWD":/app -w /app iron/java:1.8 java -jar hello.jar Wor
 docker build -t iron/kotlin:dev .
 ```
 
-Tag the version, check it with `docker run --rm iron/kotlin kotlin -version`:
+Tag the version, check it with `docker run --rm iron/kotlin:dev kotlin -version`:
 
 ```sh
 docker tag -f iron/kotlin:dev iron/kotlin:X-dev

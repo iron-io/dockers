@@ -38,16 +38,30 @@ def build(name)
   stream_exec(cmd)
 end
 
+# vtag tags the versions and returns which tags it added
 # numtags is how many version tags starting from patch. If 1, then only patch will be applied.
 def vtag(name, fromtag, v, dev=false, numtags=3)
+  tags_added = []
   newnum = [numtags, v.split(".").length()].min()
   newnum.times do |i|
-    to = "#{name}:#{v}"
-    to += "-dev" if dev
+    t = v
+    t += "-dev" if dev
+    to = "#{name}:#{t}"
     from = "#{name}:#{fromtag}"
     puts "Tagging #{from} with #{to}"
-    out, status = Open3.capture2e("docker tag #{from} #{to}")
-    puts out
+    status = stream_exec("docker tag #{from} #{to}")
+    tags_added << t
     v = v[0...v.rindex('.')] if i < (newnum - 1)
+  end
+  return tags_added
+end
+
+def push_all(name, tags)
+  tags << "latest"
+  tags << "dev"
+  tags.each do |t|
+    fullname = "#{name}:#{t}"
+    puts "Pushing #{fullname}"
+    status = stream_exec("docker push #{fullname}")
   end
 end
