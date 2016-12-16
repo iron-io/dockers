@@ -11,9 +11,11 @@ v = v.strip
 puts v
 v = v[1..v.length] # chop off v
 puts v
-vtag(name, tag, v, false)
+new_tags = vtag(name, tag, v, false)
 
 Dir.chdir 'dev'
 tag = "dev"
 build("#{name}:#{tag}")
-vtag(name, tag, v, true)
+new_tags += vtag(name, tag, v, true)
+
+push_all(name, new_tags)

@@ -3,7 +3,7 @@ require_relative '../utils/builder'
 
 stream_exec('docker pull alpine')
 stream_exec('docker pull alpine:edge')
-
+ 
 name = "iron/base"
 
 tag = "latest"
@@ -23,8 +23,11 @@ v.each do |line|
   end
 end
 p v
-vtag(name, tag, v, false)
+new_tags = vtag(name, tag, v, false)
 
 Dir.chdir 'edge'
 tag = "edge"
 build("#{name}:#{tag}")
+new_tags << tag
+
+push_all(name, new_tags)

@@ -13,9 +13,11 @@ v = v.split(' ')[1]
 p v
 v = v.split('p')[0]
 p v
-vtag(name, tag, v, false)
+new_tags = vtag(name, tag, v, false)
 
 Dir.chdir 'dev'
 tag = "dev"
 build("#{name}:#{tag}")
-vtag(name, tag, v, true)
+new_tags += vtag(name, tag, v, true)
+
+push_all(name, new_tags)
