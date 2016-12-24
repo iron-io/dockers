@@ -32,7 +32,7 @@ docker run --rm -it -v $PWD:/app -w /app iron/ruby ruby hello.rb
 
 Notice we're using iron/ruby:dev to build and iron/ruby to run. iron/ruby is much smaller.
 
-## Building an image for your Ruby app:
+### 3. Build a Docker image for your Ruby app
 
 Make a Dockerfile:
 
@@ -51,8 +51,16 @@ Build the image:
 docker build -t username/imagename:latest .
 ```
 
-Push it to Docker Hub:
+Push it to DockerHub:
 
 ```sh
 docker push username/imagename
 ```
+### 4. Push to Iron.io 
+
+When running as a worker, push via [`iron` CLI](https://github.com/iron-meteor/iron-cli#usage): 
+
+```sh
+iron worker upload -name appname -e ENV_TOKEN=$TOKEN username/imagename:latest
+```
+
