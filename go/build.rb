@@ -15,14 +15,14 @@ p v
 # returns: go version go1.6 linux/amd64
 v = v.split(' ')[2]
 p v
-v = v[2..v.length]
+v = v[2..(v.length)]
 p v
-v += ".0"
-p v
-vtag(name, tag, v, true)
+new_tags = vtag(name, tag, v, true)
 
 Dir.chdir '../'
 p Dir.pwd
 tag = "latest"
 build("#{name}:#{tag}")
-vtag(name, tag, v, false)
+new_tags += vtag(name, tag, v, false)
+
+push_all(name, new_tags)
