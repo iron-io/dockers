@@ -1,7 +1,7 @@
 # Iron.io Docker Images - Microcontainers
 
 The purpose of these images is to provide the smallest possible images for
-every major programming language. Read more about it in this [Microcontainers blog post](http://www.iron.io/blog/2016/01/microcontainers-tiny-portable-containers.html).
+every major programming language. Read more about it in this [Microcontainers blog post](https://blog.iron.io/microcontainers-tiny-portable-containers/).
 
 Use the `iron/LANGUAGE:dev` images for building/vendoring.
 
