@@ -14,13 +14,13 @@ p v
 # returns: Python 2.7.11
 v = v.split(' ')[1]
 p v
-vtag(name, tag, v)
+new_tags = vtag(name, tag, v)
 
 Dir.chdir 'dev'
 tag = "2-dev"
 build("#{name}:#{tag}")
 p v
-vtag(name, tag, v, true)
+new_tags += vtag(name, tag, v, true)
 
 # now 3
 Dir.chdir '../../python3'
@@ -32,10 +32,12 @@ p v
 # returns: Python 2.7.11
 v = v.split(' ')[1]
 p v
-vtag(name, tag, v, false)
+new_tags += vtag(name, tag, v, false)
 
 Dir.chdir 'dev'
 tag = "dev"
 build("#{name}:#{tag}")
 p v
-vtag(name, tag, v, true)
+new_tags += vtag(name, tag, v, true)
+
+push_all(name, new_tags)
