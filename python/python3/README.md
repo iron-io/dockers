@@ -2,5 +2,5 @@
 ## Using
 
 ```sh
-docker run -it --rm iron/python3 python3 --version
+docker run -it --rm iron/python python3 --version
 ```
