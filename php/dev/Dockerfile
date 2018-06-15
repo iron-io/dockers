@@ -5,5 +5,5 @@ FROM iron/php
 #  && apk add php7-dev@testing \
 #  && rm -rf /var/cache/apk/*
 
-RUN curl -sS https://getcomposer.org/installer | php
-RUN mv composer.phar /usr/local/bin/composer
+RUN apk add --no-cache build-base curl \
+  && curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
