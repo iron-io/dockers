@@ -8,7 +8,7 @@ build("#{name}:#{tag}")
 v, status = Open3.capture2e("docker run --rm #{name}:#{tag} php -v")
 v = v.strip
 puts v
-# returns: PHP 7.1.17 (cli) (built: May  3 2018 17:39:19) ( NTS ) \nCopyright (c) 1997-2018 The PHP Group\nZend Engine v3.1.0, Copyright (c) 1998-2018 Zend Technologies
+# returns: PHP 8.0.9 (cli) (built: Jul 30 2021 03:43:07) ( NTS ) \nCopyright (c) The PHP Group\nZend Engine v4.0.9, Copyright (c) Zend Technologies
 v = v.split(' ')[1]
 puts v
 new_tags = vtag(name, tag, v, false)
