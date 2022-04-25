@@ -1,3 +1,6 @@
+require 'open3'
+require_relative '../utils/builder'
+name = "iron/python"
 Dir.chdir 'python3'
 tag = "latest"
 build("#{name}:#{tag}")
