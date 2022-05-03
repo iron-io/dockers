@@ -8,5 +8,5 @@ Use iron/java-dev to compile code.
 ## Using
 
 ```sh
-docker run -it --rm iron/java:1.8 java -version
+docker run -it --rm iron/java:1.11 java -version
 ```
