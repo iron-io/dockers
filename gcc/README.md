@@ -21,5 +21,5 @@ docker tag -f iron/gcc:latest iron/gcc:5.Y.Z
 Push:
 
 ```sh
-docker push iron/go
+docker push iron/gcc
 ```
