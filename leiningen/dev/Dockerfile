@@ -1,9 +1,10 @@
-FROM iron/java:1.8
+FROM iron/java:1.11
 
 # To disable warning
 ENV LEIN_ROOT 1
-ENV LEIN_VERSION 2.6.1
+ENV LEIN_VERSION 2.9.8
 
+RUN apk update && apk upgrade
 RUN apk add --update wget ca-certificates bash curl git
 
 # Required by Figwheel
